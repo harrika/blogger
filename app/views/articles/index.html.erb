@@ -1,0 +1,14 @@
+
+<h1>all articles </h1>
+
+<ul id="articles"> 
+  <% @articles.each do |art| %>
+  <li>
+     <%= link_to art.title, article_path(art), class: 'article_title' %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "create new article", new_article_path, class: 'new_article' %>
+
+
